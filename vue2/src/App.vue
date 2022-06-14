@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import HelloWorld from '@/components/HelloWorld.vue'
-</script>
-
 <template>
   <div id="app">
     <header>
@@ -20,7 +16,9 @@ import HelloWorld from '@/components/HelloWorld.vue'
     <router-view />
   </div>
 </template>
-
+<script setup lang="ts">
+import HelloWorld from '@/components/HelloWorld.vue'
+</script>
 <style>
 @import '@/assets/base.css';
 

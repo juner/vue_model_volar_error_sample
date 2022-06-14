@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "root",
+			"path": "."
+		},
+		{
+			"name": "vue2",
+			"path": "./vue2",
+		},
+		{
+			"name": "vue3",
+			"path": "./vue3",
+		}
+	],
+	"settings": {}
+}

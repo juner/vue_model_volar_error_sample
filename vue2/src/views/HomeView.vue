@@ -1,9 +1,9 @@
-<script setup lang="ts">
-import TheWelcome from '@/components/TheWelcome.vue'
-</script>
-
 <template>
   <main>
-    <TheWelcome />
+    <TheWelcome :value="value" />
   </main>
 </template>
+<script setup lang="ts">
+import TheWelcome from '@/components/TheWelcome.vue'
+const value = "test!";
+</script>
