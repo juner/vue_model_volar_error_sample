@@ -13,5 +13,9 @@
 			"path": "./vue3",
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.exclude": {
+			"vue2": true,
+			"vue3": true
+		},}
 }

@@ -9,11 +9,14 @@
   </div>
 </template>
 <script setup lang="ts">
-const props = withDefaults(defineProps<{
-  msg: string
-}>(),{
-  msg: "empty property.",
-});
+const props = withDefaults(
+  defineProps<{
+    msg: string;
+  }>(),
+  {
+    msg: "empty property.",
+  }
+);
 </script>
 <style scoped>
 h1 {
