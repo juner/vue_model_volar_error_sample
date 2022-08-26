@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"name": "root",
+			"path": "."
+		},
+		{
+			"name": "vue2.6",
+			"path": "./vue2.6",
+		},
+		{
+			"name": "vue2.7",
+			"path": "./vue2.7",
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"vue2.6": true,
+			"vue2.7": true
+		},}
+}

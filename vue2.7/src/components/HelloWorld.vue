@@ -4,19 +4,14 @@
     <h3>
       You’ve successfully created a project with
       <a target="_blank" href="https://vitejs.dev/">Vite</a> +
-      <a target="_blank" href="https://vuejs.org/">Vue 3</a>. What's next?
+      <a target="_blank" href="https://v2.vuejs.org/">Vue 2</a>. What's next?
     </h3>
   </div>
 </template>
 <script setup lang="ts">
-const props = withDefaults(
-  defineProps<{
-    msg: string;
-  }>(),
-  {
-    msg: "empty property.",
-  }
-);
+const props = withDefaults(defineProps<{
+  msg: string
+}>(),{msg:"empty value"});
 </script>
 <style scoped>
 h1 {
@@ -37,6 +32,7 @@ h3 {
 @media (min-width: 1024px) {
   .greetings h1,
   .greetings h3 {
+    display: block;
     text-align: left;
   }
 }
