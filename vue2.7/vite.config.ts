@@ -1,7 +1,6 @@
 import { fileURLToPath } from 'url'
 
 import { defineConfig } from 'vite'
-import legacy from '@vitejs/plugin-legacy'
 import { createVuePlugin as vue2 } from 'vite-plugin-vue2'
 // @ts-ignore
 import vueTemplateBabelCompiler from 'vue-template-babel-compiler'
@@ -17,10 +16,6 @@ export default defineConfig({
       }
     }),
     scriptSetup(),
-    legacy({
-      targets: ['ie >= 11'],
-      additionalLegacyPolyfills: ['regenerator-runtime/runtime']
-    })
   ],
   resolve: {
     alias: {
