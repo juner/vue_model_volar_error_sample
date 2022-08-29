@@ -1,11 +1,10 @@
 <template>
-    <input ref="radio" type="radio" :value="props.value" @change="change">
+    <input ref="radio" type="radio" @change="change">
 </template>
 <script setup lang="ts">
-import {computed, ref} from "@vue/composition-api";
+import {computed, ref, onMounted, watch} from "@vue/composition-api";
 type Props = {
     inputValue: boolean;
-    value?: string;
 };
 const element = ref<HTMLInputElement>();
 const props = defineProps<Props>();
@@ -19,17 +18,25 @@ const internalInputValue = computed({
     set(value:boolean) {
         emits("change", value);
     }
-})
+});
+
 function change(e:Event) {
     assertIsDefined(element.value);
     const radio = element.value;
     internalInputValue.value = radio.checked;
+}
+function setChecked(value:boolean) {
+    assertIsDefined(element.value);
+    const radio = element.value;
+    radio.checked = value;
 }
 export function assertIsDefined<T>(val: T): asserts val is NonNullable<T> {
   if (val === null || val === undefined) {
     throw new Error(`Expected 'val' to be defined, but received ${val}`);
   }
 }
+onMounted(() => setChecked(props.inputValue));
+watch(() => [props.inputValue], () => setChecked(props.inputValue));
 </script>
 <script>
 export default {
