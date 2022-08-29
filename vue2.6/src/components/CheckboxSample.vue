@@ -6,11 +6,11 @@ import {computed, ref, onMounted, watch} from "@vue/composition-api";
 type Props = {
     inputValue: boolean;
 };
-const element = ref<HTMLInputElement>();
 const props = defineProps<Props>();
 const emits = defineEmits<{
     (name:"change", value:boolean):void
 }>()
+const element = ref<HTMLInputElement>();
 const internalInputValue = computed({
     get() {
         return props.inputValue;
