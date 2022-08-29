@@ -1,17 +1,21 @@
 <template>
   <div class="greetings">
-    <h1 class="green">{{ props.msg }}</h1>
+    <h1 class="green">{{ msg }}</h1>
     <h3>
       You’ve successfully created a project with
       <a target="_blank" href="https://vitejs.dev/">Vite</a> +
       <a target="_blank" href="https://v2.vuejs.org/">Vue 2</a>. What's next?
     </h3>
+    <checkbox-sample v-model="checked" />
   </div>
 </template>
 <script setup lang="ts">
-const props = withDefaults(defineProps<{
+import CheckboxSample from "./CheckboxSample.vue";
+import {ref} from "@vue/composition-api";
+withDefaults(defineProps<{
   msg: string
 }>(),{msg:"empty value"});
+const checked = ref<boolean>(false);
 </script>
 <style scoped>
 h1 {
