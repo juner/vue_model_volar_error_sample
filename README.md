@@ -42,3 +42,7 @@ export default {
 * vue 2.7
 
 ![vue2.7 v-model error](./assets/vue2.7_error.png)
+
+## conclusion
+
+→ vue2 + volar is alternate v-model is not support (v-bind:value and v-on:input only support. (vue2
